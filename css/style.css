@@ -1342,6 +1342,7 @@ header {
 }
 
 .page_catalog .breadcrumbs {
+  margin: 14px;
   display: flex;
   align-items: center;
 }
