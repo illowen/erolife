@@ -108,6 +108,7 @@ header {
 .header_wrap {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #F6E2E6;
 }
 
 .header_logo {
@@ -150,6 +151,43 @@ header {
 
 .menu_btn.active > div span:nth-child(3) {
   transform: translate(-2px, -3px) rotate(-45deg);
+}
+
+.menu_btn_close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  column-gap: 14px;
+  background: #E73467;
+  border-radius: 10px;
+  z-index: 5;
+  display: none;
+}
+
+.menu_btn_close > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.4px;
+}
+
+.menu_btn_close > div span {
+  display: block;
+  width: 15px;
+  height: 1.6px;
+  background: #ffffff;
+  transition: all 0.2s linear;
+}
+
+.menu_btn_close > div span:nth-child(1) {
+  transform: translate(0px, 2px) rotate(45deg);
+}
+
+.menu_btn_close > div span:nth-child(2) {
+  transform: translate(0px, -3px) rotate(-45deg);
 }
 
 
@@ -226,7 +264,6 @@ header {
 
 
 .menu_wrap {
-  border-top: 1px solid #F6E2E6;
   border-bottom: 1px solid #F6E2E6;
 }
 .menu_wrap .menu {
@@ -241,6 +278,14 @@ header {
   color: #430315;
 }
 
+.header_mob_phone {
+  display: none;
+  width: 45px;
+  height: 45px;
+  background: url(../img/phone_ico.svg) 50% 50% no-repeat #E73467;
+  border-radius: 10px;
+}
+
 /**************************************************************************************/
 
 .menu_catalog {
@@ -252,8 +297,8 @@ header {
   padding-bottom: 35px;
   column-gap: 18px;
 }
-.menu_catalog_item {
-  display: flex;
+.menu_catalog .menu_catalog_item {
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: start;
@@ -265,6 +310,27 @@ header {
 .menu_catalog_item span {
   font-size: 14px;
   font-weight: 400;
+}
+
+.menu_catalog_wrap .slick-dots {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  padding: 0;
+}
+
+.menu_catalog_wrap .slick-dots li button {
+  display: none;
+}
+
+.menu_catalog_wrap .slick-dots li {
+  width: 12px;
+  height: 12px;
+  background: #F6E2E6;
+  border-radius: 50px;
+}
+.menu_catalog_wrap .slick-dots li.slick-active {
+  background: #E73467;
 }
 
 /**************************************************************************************/
@@ -291,6 +357,71 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0;
+}
+
+.menu_nav_addr {
+  position: relative;
+  align-items: center;
+  min-height: 61px;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 28px;
+  display: none;
+}
+.menu_nav_addr:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url(../img/menu_nav_addr_.svg) no-repeat;
+}
+
+.header_search.header_search_menu {
+  display: none;
+}
+
+.menu_nav_tabs {
+  margin-top: 26px;
+  position: relative;
+  display: none;
+  justify-content: space-between;
+}
+
+.menu_nav_tabs:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 51px;
+  transform: translateX(-1px);
+  width: -webkit-fill-available;
+  inset: 0px 1px;
+  padding: 3px;
+  border-radius: 17px;
+  background: linear-gradient(to bottom, #EF3167, #F27C96);
+  mask: linear-gradient(fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  z-index: -1;
+}
+
+.menu_nav_tabs a {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57px;
+  background: transparent;
+  border-radius: 17px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #430315;
+}
+
+.menu_nav_tabs a.active {
+  background: #EF3167;
+  color: #ffffff;
 }
 
 .menu_nav_top {
@@ -489,7 +620,7 @@ header {
   left: 0;
   width: 51%;
   height: 100%;
-  background: url(../img/banner/banner_bg.png) no-repeat;
+  background: url(../img/banner/banner_bg.png) 100% 0 no-repeat;
   background-size: cover;
 }
 .banner .banner_img {
@@ -505,6 +636,7 @@ header {
 
 .banner_title {
   position: relative;
+  max-width: 45%;
   display: flex;
   flex-wrap: wrap;
   padding-top: 44px;
@@ -1251,9 +1383,10 @@ header {
 .footer_menu {
   display: flex;
   justify-content: right;
-  column-gap: 150px;
+  column-gap: 10vw;
 }
 .footer_menu ul {
+  padding: 0;
   display: flex;
   flex-direction: column;
   row-gap: 11px;
@@ -1950,6 +2083,7 @@ header {
 /**************************************************************************************/
 
 .page_products {
+  margin-top: 28px;
   display: flex;
   justify-content: space-between;
 }
