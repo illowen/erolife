@@ -59,6 +59,8 @@
 						<input type="text" placeholder="Поиск по сайту">
 						<button class="submit"></button>
 					</div>
+
+					<a href="tel:" class="header_mob_phone"></a>
 				</div>
 
 				<div class="header_admin">
@@ -88,7 +90,29 @@
 
 	<div class="menu_wrapper">
 		<div class="container">
+			<div class="menu_btn_close">
+				<div>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
 			<ul class="menu_nav">
+
+				<li class="menu_nav_addr">
+					Нижний Новгород
+				</li>
+
+				<div class="header_search header_search_menu">
+					<input type="text" placeholder="Поиск по сайту">
+					<button class="submit"></button>
+				</div>
+				
+				<li class="menu_nav_tabs">
+					<a href="#" class="active">Каталог</a>
+					<a href="#">Информация</a>
+				</li>
+
+
 				<li class="menu_nav_top active" menu-nav="1">
 					<a href="#" class="menu_nav_btn ico1">Распродажа</a>
 
@@ -312,24 +336,6 @@
 			</ul>
 		</div>
 	</div>
-
-	<script>
-		$(".menu_btn").click(function () {
-			$(this).toggleClass('active');
-			$('.menu_wrapper').toggleClass('active');
-		});
-
-		$(".menu_nav_top").click(function () {
-			let _parent = $(this).closest(".menu_nav_top");
-
-			var menuNav = $(this).attr('menu-nav'),
-				menuList = $('.menu_nav_list[menu-nav="'+ menuNav +'"]');
-			$('.menu_nav_list').removeClass('active');
-			$('.menu_nav_top').removeClass('active');
-			$(this, _parent).addClass('active');
-			menuList.addClass('active');
-		});
-	</script>
 	
 	<section class="menu_catalog">
 		<div class="container">
@@ -390,7 +396,10 @@
 						<a href="#" class="banner_btn">КУПИТЬ</a>
 					</div>
 					<div class="banner_img">
-						<img src="./img/banner/banner_img.jpg" alt="">
+						<picture>
+							<source srcset="./img/banner/banner_img_mob.jpg" media="(max-width: 768px)" />
+							<img src="./img/banner/banner_img.jpg" alt="">
+						</picture>
 					</div>
 				</div>
 
@@ -407,7 +416,10 @@
 						<a href="#" class="banner_btn">КУПИТЬ</a>
 					</div>
 					<div class="banner_img">
-						<img src="./img/banner/banner_img.jpg" alt="">
+						<picture>
+							<source srcset="./img/banner/banner_img_mob.jpg" media="(max-width: 768px)" />
+							<img src="./img/banner/banner_img.jpg" alt="">
+						</picture>
 					</div>
 				</div>
 			</div>
@@ -1163,6 +1175,27 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<script>
+		if ($(window).width() < 991) {
+			$('.menu_catalog_wrap').slick({
+				arrows: false,
+				dots: true,
+				infinite: false,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 4,
+						}
+					},
+				]
+			});
+		}
+	</script>
 
 
 </body>
