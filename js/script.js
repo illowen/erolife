@@ -37,6 +37,24 @@ $(document).ready(function () {
 
     });
 
+    $(".menu_btn").click(function () {
+        $(this).toggleClass('active');
+        $('.menu_wrapper').toggleClass('active');
+    });
+
+    $(".menu_btn_close").click(function () {
+        $('.menu_wrapper').removeClass('active');
+    });
+
+    $(".menu_nav_top").click(function () {
+        let _parent = $(this).closest(".menu_nav_top");
+
+        var menuNav = $(this).attr('menu-nav'),
+            menuList = $('.menu_nav_list[menu-nav="'+ menuNav +'"]');
+        $(this, _parent).toggleClass('active');
+        menuList.toggleClass('active');
+    });
+
     $(".page_catalog_nav_btn").click(function () {
         let _parent = $(this).closest(".page_catalog_nav_block");
 
@@ -92,6 +110,16 @@ $(document).ready(function () {
     });
 
     $(".page_catalog_filter_list").mCustomScrollbar({
+        axis: "y",              // вертикальный скролл
+        theme: "rounded-dark",  // тема
+        scrollInertia: "280",   // продолжительность прокрутки, значение в миллисекундах
+        setHeight: "100%",      // высота блока (переписывает CSS)
+        mouseWheel: {
+            deltaFactor: 100    // кол-во пикселей на одну прокрутку колёсика мыши
+        }
+    });
+
+    $(".menu_nav").mCustomScrollbar({
         axis: "y",              // вертикальный скролл
         theme: "rounded-dark",  // тема
         scrollInertia: "280",   // продолжительность прокрутки, значение в миллисекундах
