@@ -241,11 +241,11 @@ header {
 .header_admin {
   display: flex;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 32px;
 }
 .header_admin a {
   position: relative;
-  padding-left: 41px;
+  padding-left: 36px;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -262,12 +262,15 @@ header {
 }
 .header_admin a.favourites:before {
   background: url(../img/favourites_ico.svg) 50% 50% no-repeat;
+  background-size: 23px;
 }
 .header_admin a.admin:before {
   background: url(../img/admin_ico.svg) 50% 50% no-repeat;
+  background-size: 20px;
 }
 .header_admin a.cart:before {
   background: url(../img/cart_ico.svg) 50% 50% no-repeat;
+  background-size: 23px;
 }
 
 
@@ -353,7 +356,7 @@ header {
 .menu_wrapper {
   position: fixed;
   width: 100%;
-  top: 149px;
+  top: 118px;
   padding-top: 20px;
   padding-bottom: 60px;
   z-index: -1;
@@ -595,7 +598,7 @@ header {
   border-radius: 10px;
   font-family: "Geologica Cursive", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
@@ -681,7 +684,7 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
   color: #ffffff;
   background: url(../img/banner/banner_btn.png) no-repeat;
   background-size: contain;
@@ -739,7 +742,13 @@ header {
   background: linear-gradient(153.45deg, #FCF4F6 8.33%, #FEC8D2 91.67%);
   border-radius: 17px;
   overflow: hidden;
+  transition: all 0.2s linear;
 }
+
+.category1_item:hover .category1_item_wrap {
+  background: linear-gradient(153.45deg, #FDEEF1 8.33%, #FB7497 91.67%);
+}
+
 .category1_item_wrap:before {
   content: '';
   position: absolute;
@@ -801,6 +810,11 @@ header {
   font-weight: 700;
   line-height: 112%;
   color: #430315;
+  transition: all 0.2s linear;
+}
+
+.category1_item:hover span {
+  color: #ffffff;
 }
 
 .category1_item .category1_img {
@@ -861,6 +875,11 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   color: rgb(67, 3, 21);
+  transition: all 0.2s linear;
+}
+
+.category2_item:hover {
+  color: #EF3167;
 }
 
 .category2_item .category2_img {
@@ -976,7 +995,7 @@ header {
 .catalog_block_img {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 305px;
   border: 1px solid #F6E2E6;
   border-radius: 17px;
   overflow: hidden;
@@ -987,11 +1006,13 @@ header {
 
 .catalog_block .catalog_cart {
   position: absolute;
-  top: 285px;
+  top: 254px;
   display: none;
   width: 86%;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .catalog_block:hover .catalog_cart {
@@ -1075,7 +1096,7 @@ header {
 }
 
 .catalog_block_title {
-  margin-top: 10px;
+  margin-top: 6px;
   font-size: 17px;
   font-weight: 500;
   color: #430315;
@@ -1089,7 +1110,7 @@ header {
 }
 
 .new_price {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 500;
   color: #430315;
 }
@@ -1125,7 +1146,7 @@ header {
 
 .articles_img {
   width: 100%;
-  height: 335px;
+  height: 277px;
   overflow: hidden;
   border-radius: 17px;
 }
@@ -1137,9 +1158,10 @@ header {
 }
 
 .articles_title {
-  margin-top: 22px;
+  margin-top: 18px;
   font-size: 19px;
   font-weight: 500;
+  line-height: 110%;
   color: #430315;
 }
 
@@ -1154,7 +1176,7 @@ header {
   padding-left: 29px;
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
   color: #8E7D82;
@@ -1165,7 +1187,8 @@ header {
   left: 0;
   width: 24px;
   height: 24px;
-  background: url(../img/articles_time.svg) no-repeat;
+  background: url(../img/articles_time.svg) 50% 50% no-repeat;
+  background-size: 20px;
 }
 
 .articles_date {
@@ -1173,7 +1196,7 @@ header {
   padding-left: 29px;
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
   color: #8E7D82;
@@ -1184,7 +1207,8 @@ header {
   left: 0;
   width: 24px;
   height: 24px;
-  background: url(../img/articles_date.svg) no-repeat;
+  background: url(../img/articles_date.svg) 50% 50% no-repeat;
+  background-size: 20px;
 }
 
 .all_articles {
@@ -2484,6 +2508,10 @@ header {
   width: 24px;
   height: 24px;
   background: url("../img/cart1_ico.svg") no-repeat;
+  transition: all 0.2s linear;
+}
+.cart1:hover:before {
+  background: url("../img/cart1_ico_hover.svg") no-repeat;
 }
 .cart2 {
   position: relative;
