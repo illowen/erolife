@@ -177,29 +177,4 @@ $(document).ready(function () {
             },
         ]
     });
-
-    /* btn anim */
-
-    var animStart = false, timerEnter = null;
-
-		$(document).on({
-			mouseenter: function () {
-				var path = $(this).find("path");
-				if (animStart = !animStart) {
-					var t = 0;
-					timerEnter = setInterval(function () {
-						path.eq(t).fadeTo(250, 0), setTimeout(function () {
-							path.eq(t).fadeTo(250, 1), t = t === path.length - 1 ? 0 : t + 1
-						}, 1)
-					}, 150)
-				}
-			}, mouseleave: function () {
-				var path = $(this).find("path");
-				animStart = false, clearInterval(timerEnter), setTimeout(function () {
-					path.each(function (path, t) {
-						path < 2 && $(t).fadeTo(150, 0)
-					})
-				}, 1)
-			}
-		}, ".btn-outline")
 })
