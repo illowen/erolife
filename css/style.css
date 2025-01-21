@@ -101,6 +101,9 @@ header.fixed .menu_wrap {
   background: url(../img/phone_ico.svg) no-repeat;
 }
 
+.header_wrapper {
+  border-bottom: 1px solid #F6E2E6;
+}
 .header_wrapper .container {
   display: flex;
   justify-content: space-between;
@@ -153,7 +156,7 @@ header.fixed .menu_wrap {
 }
 
 .menu_btn.active > div span:nth-child(1) {
-  transform: translate(-2px, 7px) rotate(45deg);
+  transform: translate(-2px, 5px) rotate(45deg);
 }
 
 .menu_btn.active > div span:nth-child(2) {
@@ -161,7 +164,7 @@ header.fixed .menu_wrap {
 }
 
 .menu_btn.active > div span:nth-child(3) {
-  transform: translate(-2px, -3px) rotate(-45deg);
+  transform: translate(-2px, -5px) rotate(-45deg);
 }
 
 .menu_btn_close {
@@ -255,6 +258,9 @@ header.fixed .menu_wrap {
   font-weight: 500;
   color: #8E7D82;
 }
+.header_admin a:hover {
+  color: #E73467;
+}
 
 .header_admin a:before {
   content: '';
@@ -262,23 +268,35 @@ header.fixed .menu_wrap {
   left: 0;
   width: 34px;
   height: 34px;
+  transition: all 0.2s linear;
 }
 .header_admin a.favourites:before {
   background: url(../img/favourites_ico.svg) 50% 50% no-repeat;
+  background-size: 23px;
+}
+.header_admin a.favourites:hover:before {
+  background: url(../img/favourites_ico_hover.svg) 50% 50% no-repeat;
   background-size: 23px;
 }
 .header_admin a.admin:before {
   background: url(../img/admin_ico.svg) 50% 50% no-repeat;
   background-size: 20px;
 }
+.header_admin a.admin:hover:before {
+  background: url(../img/admin_ico_hover.svg) 50% 50% no-repeat;
+  background-size: 20px;
+}
 .header_admin a.cart:before {
   background: url(../img/cart_ico.svg) 50% 50% no-repeat;
+  background-size: 23px;
+}
+.header_admin a.cart:hover:before {
+  background: url(../img/cart_ico_hover.svg) 50% 50% no-repeat;
   background-size: 23px;
 }
 
 
 .menu_wrap {
-  border-top: 1px solid #F6E2E6;
   border-bottom: 1px solid #F6E2E6;
 }
 .menu_wrap .menu {
@@ -1502,6 +1520,11 @@ header.fixed .menu_wrap {
   font-size: 18px;
   font-weight: 400;
   color: #430315;
+  transition: all 0.2s linear;
+}
+
+.footer_menu ul li a:hover {
+  color: #E73467;
 }
 
 .footer_bottom {
