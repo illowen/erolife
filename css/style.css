@@ -2692,5 +2692,72 @@ header.fixed .menu_wrap {
 }
 
 
+/**********************************************/
 
+.anim-item{
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/*anim 1*/
+.btn-outline {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-align: center;
+  color: #E9164D;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s cubic-bezier(0.76, 0, 0.24, 1);
+  width: 290px;
+  height: 142px;
+}
+.btn-outline svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.btn-outline path {
+  stroke: currentColor;
+  stroke-width: 2px;
+  transform-origin: 50% 50%;
+}
+
+[class*=outline] path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 0;
+  fill: none;
+}
+
+[class*=outline].animated path {
+  animation: dashOutline 15s ease;
+}
+
+@keyframes dashOutline {
+  from {
+    stroke-dashoffset: 10000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/*end anim 1*/
+
+.btn-outline path {
+  stroke: #ffffff;
+}
 
