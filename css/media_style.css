@@ -13,16 +13,13 @@
         margin-left: 2vw;
     }
 
-    .catalog_block {
-        width: 24%;
-    }
-
     .offers2 {
         background-position: 50% -2vw;
     }
 }
 
 @media screen and (max-width: 1550px) {
+
     .banner_title .title2 {
         margin-top: 1vw;
         width: 100%;
@@ -173,6 +170,10 @@
     }
     .page_catalog_category_block span {
         font-size: 14px;
+    }
+
+    .catalog_block {
+        width: 24%;
     }
 }
 

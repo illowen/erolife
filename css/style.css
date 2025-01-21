@@ -50,6 +50,9 @@ header {
   transition: all 0.2s linear;
   background: #ffffff;
 }
+header.fixed .menu_wrap {
+  display: none;
+}
 .header_top {
   background: #EF3167;
 }
@@ -607,6 +610,7 @@ header {
 .btn:hover {
   background: #ffffff;
   color: #430315;
+  border-radius: 50px;
 }
 
 .btn.glass {
@@ -756,8 +760,14 @@ header {
   top: 0;
   width: 80%;
   height: 263px;
-  background: url(../img/category1/category1_item_decor.png) no-repeat;
+  background: url(../img/category1/category1_item_decor.svg) no-repeat;
   background-size: contain;
+  opacity: 0.1;
+  transition: all 0.2s linear;
+}
+
+.category1_item:hover .category1_item_wrap:before {
+  opacity: 0.5;
 }
 
 .category1_item:nth-child(1) .category1_item_wrap:before {
@@ -804,9 +814,9 @@ header {
 }
 .category1_item span {
   position: absolute;
-  bottom: 0.6vw;
-  left: 0.4vw;
-  font-size: 0.8vw;
+  bottom: 0.8vw;
+  left: 0.8vw;
+  font-size: 20px;
   font-weight: 700;
   line-height: 112%;
   color: #430315;
@@ -870,6 +880,7 @@ header {
   width: 27%;
   height: 118px;
   background: rgb(252, 244, 244);
+  border: 1px solid #F6E2E6;
   border-radius: 17px;
   padding-left: 2vw;
   font-weight: 700;
@@ -971,7 +982,7 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 1vw;
+  column-gap: 0.8vw;
   row-gap: 37px;
 }
 
@@ -1007,16 +1018,38 @@ header {
 .catalog_block .catalog_cart {
   position: absolute;
   top: 254px;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
   width: 86%;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 14px;
+  transform: translateX(-50%) translateY(60px);
+  font-size: 12px;
   font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
 }
 
 .catalog_block:hover .catalog_cart {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.catalog_block .catalog_cart:before {
+  content: '';
+  position: relative;
   display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/cart1_ico.svg) 50% 50% no-repeat;
+  background-size: contain;
+  transition: all 0.2s linear;
+}
+
+.catalog_block .catalog_cart:hover:before {
+  background: url(../img/cart1_ico_hover.svg) 50% 50% no-repeat;
+  background-size: contain;
 }
 
 .catalog_block_new {
@@ -1142,6 +1175,12 @@ header {
 
 .articles_block {
   width: 18%;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.articles_block:hover {
+  border-radius: 200px 200px 0 0;
 }
 
 .articles_img {
