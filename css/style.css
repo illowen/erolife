@@ -690,8 +690,6 @@ header.fixed .menu_wrap {
   font-size: 22px;
   font-weight: 500;
   color: #ffffff;
-  background: url(../img/banner/banner_btn.png) no-repeat;
-  background-size: contain;
 }
 
 .banner .slick-dots {
