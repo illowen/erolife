@@ -292,6 +292,9 @@ header.fixed .menu_wrap {
   font-weight: 500;
   color: #430315;
 }
+.menu_wrap .menu a:hover {
+  color: #E73467;
+}
 
 .header_mob_phone {
   display: none;
@@ -321,6 +324,9 @@ header.fixed .menu_wrap {
   font-size: 14px;
   font-weight: 400;
   color: #430315;
+}
+.menu_catalog .menu_catalog_item:hover {
+  color: #E73467;
 }
 .menu_catalog .menu_catalog_item .menu_catalog_img {
   width: 90px;
@@ -365,7 +371,10 @@ header.fixed .menu_wrap {
   z-index: -1;
   background: #ffffff;
   opacity: 0;
-  transition: all 0.2s linear;
+}
+
+.header.fixed ~ .menu_wrapper {
+  top: 82px;
 }
 
 .menu_wrapper.active {
@@ -608,8 +617,6 @@ header.fixed .menu_wrap {
   transition: all 0.2s linear;
 }
 .btn:hover {
-  background: #ffffff;
-  color: #430315;
   border-radius: 50px;
 }
 
@@ -1038,16 +1045,11 @@ header.fixed .menu_wrap {
   content: '';
   position: relative;
   display: block;
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background: url(../img/cart1_ico.svg) 50% 50% no-repeat;
-  background-size: contain;
+  background-size: 20px;
   transition: all 0.2s linear;
-}
-
-.catalog_block .catalog_cart:hover:before {
-  background: url(../img/cart1_ico_hover.svg) 50% 50% no-repeat;
-  background-size: contain;
 }
 
 .catalog_block_new {
