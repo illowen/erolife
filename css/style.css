@@ -1650,7 +1650,7 @@ header.fixed .menu_wrap {
   width: 14.1%;
   padding: 8px 0.4vw;
   border: 1px solid #F6E2E6;
-  border-radius: 21px;
+  border-radius: 20px;
 }
 
 .age_catalog_category_img {
@@ -1672,6 +1672,11 @@ header.fixed .menu_wrap {
   font-size: 14px;
   font-weight: 500;
   color: #430315;
+}
+
+.page_catalog_category_block:hover span {
+  transition: all 0.2s linear;
+  color: #EF3167;
 }
 
 /**************************************************************************************/
@@ -2132,7 +2137,7 @@ header.fixed .menu_wrap {
   width: 21.8%;
 }
 
-.page_catalog_all {
+.page_catalog_wrapper .page_catalog_all {
   margin: 64px auto 0;
   width: 178px;
   height: 88px;
@@ -2143,8 +2148,7 @@ header.fixed .menu_wrap {
   font-size: 16px;
   font-weight: 700;
   color: #E9164D;
-  background: url(../img/page_catalog_all_bg.png) no-repeat;
-  background-size: contain;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -2782,7 +2786,7 @@ header.fixed .menu_wrap {
 }
 /*end anim 1*/
 
-.btn-outline path {
+.banner_btn path {
   stroke: #ffffff;
 }
 
